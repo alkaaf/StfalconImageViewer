@@ -1,9 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'maven-publish'
+//apply plugin: 'maven-publish'
 //
 android {
     compileSdkVersion 29
+    namespace "com.stfalcon.imageviewer"
 
     defaultConfig {
         minSdkVersion 19
@@ -20,20 +21,20 @@ android {
     }
 
     afterEvaluate {
-        publishing {
-            publications {
-                // Creates a Maven publication called "release".
-                release(MavenPublication) {
-                    // Applies the component for the release build variant.
-                    from components.release
-
-                    // You can then customize attributes of the publication as shown below.
-                    groupId = 'com.github.stfalcon'
-                    artifactId = 'stfalcon-imageviewer'
-                    version = '1.0.2'
-                }
-            }
-        }
+//        publishing {
+//            publications {
+//                // Creates a Maven publication called "release".
+//                release(MavenPublication) {
+//                    // Applies the component for the release build variant.
+//                    from components.release
+//
+//                    // You can then customize attributes of the publication as shown below.
+//                    groupId = 'com.github.stfalcon'
+//                    artifactId = 'stfalcon-imageviewer'
+//                    version = '1.0.2'
+//                }
+//            }
+//        }
     }
 
 }
